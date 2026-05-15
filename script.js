@@ -14,29 +14,42 @@ function closePopup(){
 
 function sendOrder(){
 
-  let fullname = document.getElementById("fullname").value;
-  let phone = document.getElementById("phone").value;
-  let city = document.getElementById("city").value;
-  let address = document.getElementById("address").value;
-  let product = document.getElementById("product").value;
+  let fullname =
+  document.getElementById("fullname").value;
+
+  let phone =
+  document.getElementById("phone").value;
+
+  let city =
+  document.getElementById("city").value;
+
+  let address =
+  document.getElementById("address").value;
+
+  let product =
+  document.getElementById("product").value;
 
   let message =
 `طلب جديد من Bride Sahara 🌸
 
-الاسم الكامل: ${fullname}
+الاسم الكامل:
+${fullname}
 
-رقم الهاتف: ${phone}
+رقم الهاتف:
+${phone}
 
-المدينة: ${city}
+المدينة:
+${city}
 
-العنوان: ${address}
+العنوان:
+${address}
 
 المنتج المختار:
 ${product}`;
 
-  let whatsappURL =
+  let url =
 `https://wa.me/212605945494?text=${encodeURIComponent(message)}`;
 
-  window.open(whatsappURL, "_blank");
+  window.open(url, "_blank");
 
 }
