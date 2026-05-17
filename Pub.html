@@ -1,277 +1,587 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<!DOCTYPE html><html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>باك الحمام الصحراوي</title>  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">  <style>
 
-<title>متجر Sahara Layer</title>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
 
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    body{
+      font-family:'Cairo',sans-serif;
+      background:#f7f1e8;
+      color:#222;
+      overflow-x:hidden;
+    }
 
-<style>
+    img{
+      max-width:100%;
+      display:block;
+    }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+    a{
+      text-decoration:none;
+    }
 
-body{
-    font-family:'Cairo',sans-serif;
-    background:#f7f3ee;
-    color:#222;
-    line-height:1.7;
-}
+    .container{
+      width:92%;
+      max-width:1200px;
+      margin:auto;
+    }
 
-.hero{
-    min-height:100vh;
-    background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
-    url('https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=1200&auto=format&fit=crop');
-    background-size:cover;
-    background-position:center;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:20px;
-}
+    .hero{
+      min-height:100vh;
+      background:
+      linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+      url('https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1600&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      align-items:center;
+      position:relative;
+    }
 
-.hero-content{
-    max-width:650px;
-    color:white;
-}
+    .hero-content{
+      color:white;
+      max-width:650px;
+    }
 
-.hero h1{
-    font-size:48px;
-    margin-bottom:15px;
-    font-weight:700;
-}
+    .top-badge{
+      display:inline-block;
+      background:#d4af37;
+      color:#111;
+      padding:10px 18px;
+      border-radius:40px;
+      font-weight:700;
+      margin-bottom:20px;
+      font-size:14px;
+    }
 
-.hero p{
-    font-size:20px;
-    margin-bottom:30px;
-    opacity:.95;
-}
+    .hero h1{
+      font-size:58px;
+      line-height:1.2;
+      margin-bottom:20px;
+      font-weight:800;
+    }
 
-.whatsapp-btn{
-    display:inline-block;
-    background:#25D366;
-    color:white;
-    padding:16px 35px;
-    border-radius:50px;
-    text-decoration:none;
-    font-size:18px;
-    font-weight:700;
-    transition:.3s;
-}
+    .hero p{
+      font-size:20px;
+      line-height:1.9;
+      margin-bottom:35px;
+      color:#f1f1f1;
+    }
 
-.whatsapp-btn:hover{
-    transform:translateY(-3px);
-    background:#1ebe5d;
-}
+    .btns{
+      display:flex;
+      gap:15px;
+      flex-wrap:wrap;
+    }
 
-.section{
-    padding:80px 20px;
-}
+    .btn{
+      padding:16px 30px;
+      border-radius:60px;
+      font-size:18px;
+      font-weight:700;
+      transition:.3s;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+    }
 
-.container{
-    max-width:1100px;
-    margin:auto;
-}
+    .btn-whatsapp{
+      background:#25D366;
+      color:white;
+    }
 
-.title{
-    text-align:center;
-    margin-bottom:50px;
-}
+    .btn-whatsapp:hover{
+      transform:translateY(-3px);
+      background:#1db85a;
+    }
 
-.title h2{
-    font-size:36px;
-    margin-bottom:10px;
-}
+    .btn-outline{
+      border:2px solid white;
+      color:white;
+    }
 
-.features{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-    gap:25px;
-}
+    .section{
+      padding:90px 0;
+    }
 
-.feature-box{
-    background:white;
-    padding:35px 25px;
-    border-radius:20px;
-    text-align:center;
-    box-shadow:0 5px 20px rgba(0,0,0,.06);
-}
+    .section-title{
+      text-align:center;
+      margin-bottom:60px;
+    }
 
-.feature-box h3{
-    margin-bottom:10px;
-}
+    .section-title h2{
+      font-size:42px;
+      margin-bottom:15px;
+      color:#1d1d1d;
+    }
 
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
+    .section-title p{
+      color:#666;
+      font-size:18px;
+    }
 
-.gallery img{
-    width:100%;
-    border-radius:20px;
-    height:340px;
-    object-fit:cover;
-}
+    .features{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
 
-.cta{
-    background:#111;
-    color:white;
-    text-align:center;
-    padding:90px 20px;
-}
+    .feature-card{
+      background:white;
+      border-radius:28px;
+      padding:35px 25px;
+      box-shadow:0 10px 35px rgba(0,0,0,.06);
+      text-align:center;
+      transition:.3s;
+    }
 
-.cta h2{
-    font-size:40px;
-    margin-bottom:20px;
-}
+    .feature-card:hover{
+      transform:translateY(-6px);
+    }
 
-.cta p{
-    margin-bottom:30px;
-    font-size:18px;
-}
+    .feature-card i{
+      width:80px;
+      height:80px;
+      background:#efe2cc;
+      color:#9b6b2d;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      margin:auto;
+      font-size:32px;
+      margin-bottom:22px;
+    }
 
-footer{
-    background:#000;
-    color:white;
-    text-align:center;
-    padding:20px;
-    font-size:14px;
-}
+    .feature-card h3{
+      font-size:24px;
+      margin-bottom:12px;
+    }
 
-@media(max-width:768px){
+    .feature-card p{
+      color:#666;
+      line-height:1.8;
+    }
 
-.hero h1{
-    font-size:34px;
-}
+    .products-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:25px;
+    }
 
-.hero p{
-    font-size:18px;
-}
+    .product-card{
+      overflow:hidden;
+      border-radius:28px;
+      background:white;
+      box-shadow:0 10px 35px rgba(0,0,0,.06);
+    }
 
-.cta h2{
-    font-size:30px;
-}
+    .product-card img{
+      height:320px;
+      width:100%;
+      object-fit:cover;
+    }
 
-}
+    .product-info{
+      padding:25px;
+    }
 
-</style>
-</head>
+    .product-info h3{
+      margin-bottom:10px;
+      font-size:24px;
+    }
 
-<body>
+    .product-info p{
+      color:#666;
+      line-height:1.8;
+    }
 
-<section class="hero">
+    .before-after{
+      background:#111;
+      color:white;
+      border-radius:35px;
+      padding:50px;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+      align-items:center;
+    }
 
-<div class="hero-content">
+    .before-after img{
+      border-radius:25px;
+      height:420px;
+      object-fit:cover;
+      width:100%;
+    }
 
-<h1>أناقة صحراوية بلمسة فاخرة ✨</h1>
+    .before-after h2{
+      font-size:42px;
+      margin-bottom:20px;
+    }
 
-<p>
-تشكيلة مميزة من الملاحف والإكسسوارات الصحراوية 
-بجودة راقية وتصاميم أنيقة تناسب ذوقك.
-</p>
+    .before-after p{
+      line-height:2;
+      color:#ddd;
+      margin-bottom:25px;
+    }
 
-<a class="whatsapp-btn"
-href="https://wa.me/212600000000?text=مرحبا، أريد الطلب من متجر Sahara Layer"
-target="_blank">
+    .reviews{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:25px;
+    }
 
-اطلبي الآن عبر واتساب
+    .review-card{
+      background:white;
+      padding:30px;
+      border-radius:28px;
+      box-shadow:0 10px 35px rgba(0,0,0,.06);
+    }
 
-</a>
+    .review-stars{
+      color:#d4af37;
+      margin-bottom:15px;
+      font-size:18px;
+    }
+
+    .review-card p{
+      line-height:1.9;
+      color:#555;
+      margin-bottom:20px;
+    }
+
+    .review-user{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .review-user img{
+      width:55px;
+      height:55px;
+      border-radius:50%;
+      object-fit:cover;
+    }
+
+    .offer-box{
+      background:linear-gradient(135deg,#b88b4a,#e4c68d);
+      padding:70px 30px;
+      border-radius:35px;
+      text-align:center;
+      color:white;
+    }
+
+    .offer-box h2{
+      font-size:48px;
+      margin-bottom:15px;
+    }
+
+    .price{
+      font-size:56px;
+      font-weight:800;
+      margin:25px 0;
+    }
+
+    .old-price{
+      text-decoration:line-through;
+      opacity:.7;
+      font-size:28px;
+      margin-right:10px;
+    }
+
+    .floating-btn{
+      position:fixed;
+      bottom:20px;
+      left:20px;
+      background:#25D366;
+      color:white;
+      width:70px;
+      height:70px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:32px;
+      z-index:999;
+      box-shadow:0 10px 25px rgba(0,0,0,.2);
+    }
+
+    footer{
+      background:#111;
+      color:white;
+      text-align:center;
+      padding:30px 20px;
+      margin-top:80px;
+    }
+
+    @media(max-width:768px){
+
+      .hero{
+        text-align:center;
+      }
+
+      .hero h1{
+        font-size:38px;
+      }
+
+      .hero p{
+        font-size:18px;
+      }
+
+      .btns{
+        justify-content:center;
+      }
+
+      .section-title h2,
+      .before-after h2,
+      .offer-box h2{
+        font-size:32px;
+      }
+
+      .price{
+        font-size:42px;
+      }
+
+      .before-after{
+        padding:35px 25px;
+      }
+
+    }
+
+  </style></head>
+<body>  <section class="hero">
+    <div class="container">
+      <div class="hero-content"><span class="top-badge">
+      ✨ باك الحمام الصحراوي الأصلي
+    </span>
+
+    <h1>
+      دللي بشرتك بروتين الحمام المغربي الصحراوي
+    </h1>
+
+    <p>
+      باك متكامل للعناية بالبشرة والجسم بمنتجات مستوحاة من أسرار الحمام المغربي التقليدي ولمسة صحراوية فاخرة.
+    </p>
+
+    <div class="btns">
+
+      <a class="btn btn-whatsapp" href="https://wa.me/212600000000?text=مرحبا، أريد طلب باك الحمام الصحراوي" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        اطلبي الآن عبر واتساب
+      </a>
+
+      <a class="btn btn-outline" href="#products">
+        مشاهدة التفاصيل
+      </a>
+
+    </div>
+
+  </div>
+</div>
+
+  </section>  <section class="section">
+    <div class="container"><div class="section-title">
+    <h2>لماذا هذا الباك؟</h2>
+    <p>كل ما تحتاجينه لجلسة حمام مغربي فاخرة داخل المنزل</p>
+  </div>
+
+  <div class="features">
+
+    <div class="feature-card">
+      <i class="fa-solid fa-spa"></i>
+      <h3>عناية طبيعية</h3>
+      <p>
+        تركيبة مستوحاة من وصفات الحمام المغربي التقليدي بمكونات ناعمة على البشرة.
+      </p>
+    </div>
+
+    <div class="feature-card">
+      <i class="fa-solid fa-droplet"></i>
+      <h3>ترطيب عميق</h3>
+      <p>
+        يمنح بشرتك نعومة ولمعاناً مع إحساس بالنظافة والانتعاش.
+      </p>
+    </div>
+
+    <div class="feature-card">
+      <i class="fa-solid fa-heart"></i>
+      <h3>إحساس فاخر</h3>
+      <p>
+        تجربة استرخاء وأناقة مستوحاة من أجواء الحمام المغربي الأصيل.
+      </p>
+    </div>
+
+    <div class="feature-card">
+      <i class="fa-solid fa-truck-fast"></i>
+      <h3>توصيل سريع</h3>
+      <p>
+        التوصيل متوفر لجميع المدن المغربية مع الدفع عند الاستلام.
+      </p>
+    </div>
+
+  </div>
 
 </div>
 
-</section>
+  </section>  <section class="section" id="products">
+    <div class="container"><div class="section-title">
+    <h2>محتويات الباك</h2>
+    <p>منتجات مختارة بعناية لتجربة متكاملة</p>
+  </div>
 
-<section class="section">
+  <div class="products-grid">
 
-<div class="container">
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop">
+      <div class="product-info">
+        <h3>الصابون المغربي</h3>
+        <p>
+          يساعد على تنظيف البشرة وإزالة الشوائب بلطف.
+        </p>
+      </div>
+    </div>
 
-<div class="title">
-<h2>لماذا نحن؟</h2>
-<p>تفاصيل صغيرة تصنع فرقاً كبيراً</p>
-</div>
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1200&auto=format&fit=crop">
+      <div class="product-info">
+        <h3>زيوت طبيعية</h3>
+        <p>
+          تمنح البشرة ترطيباً عميقاً ولمسة حريرية.
+        </p>
+      </div>
+    </div>
 
-<div class="features">
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=1200&auto=format&fit=crop">
+      <div class="product-info">
+        <h3>مستلزمات الحمام</h3>
+        <p>
+          قفاز وتقنيات عناية تمنحك تجربة احترافية داخل المنزل.
+        </p>
+      </div>
+    </div>
 
-<div class="feature-box">
-<h3>جودة فاخرة</h3>
-<p>خامات مختارة بعناية وأناقة تدوم.</p>
-</div>
-
-<div class="feature-box">
-<h3>توصيل سريع</h3>
-<p>نوصل لجميع المدن المغربية بسرعة وأمان.</p>
-</div>
-
-<div class="feature-box">
-<h3>تصاميم حصرية</h3>
-<p>قطع مميزة بلمسة صحراوية راقية.</p>
-</div>
-
-<div class="feature-box">
-<h3>دفع عند الاستلام</h3>
-<p>اطلبي بكل راحة وثقة.</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="section">
-
-<div class="container">
-
-<div class="title">
-<h2>بعض منتجاتنا</h2>
-<p>صور حقيقية من التشكيلة</p>
-</div>
-
-<div class="gallery">
-
-<img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop">
-
-<img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1200&auto=format&fit=crop">
-
-<img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1200&auto=format&fit=crop">
+  </div>
 
 </div>
 
+  </section>  <section class="section">
+    <div class="container"><div class="before-after">
+
+    <div>
+      <h2>
+        إشراقة ونعومة من أول استعمال ✨
+      </h2>
+
+      <p>
+        استمتعي بجلسة استرخاء حقيقية مع مكونات مختارة بعناية تمنح بشرتك نظافة عميقة وملمساً ناعماً يدوم.
+      </p>
+
+      <a class="btn btn-whatsapp" href="https://wa.me/212600000000?text=مرحبا، أريد طلب باك الحمام الصحراوي" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        اطلب الآن
+      </a>
+
+    </div>
+
+    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop">
+
+  </div>
+
 </div>
 
-</section>
+  </section>  <section class="section">
+    <div class="container"><div class="section-title">
+    <h2>آراء بعض الزبونات</h2>
+    <p>ثقة وتجارب حقيقية من عميلاتنا</p>
+  </div>
 
-<section class="cta">
+  <div class="reviews">
 
-<h2>جاهزة للطلب؟</h2>
+    <div class="review-card">
+      <div class="review-stars">
+        ★★★★★
+      </div>
+      <p>
+        الباك رائع جداً والرائحة فخمة والإحساس بعد الحمام مختلف تماماً 🤍
+      </p>
+      <div class="review-user">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg">
+        <div>
+          <strong>سلمى</strong>
+        </div>
+      </div>
+    </div>
 
-<p>
-راسلينا الآن عبر واتساب وسنساعدك في اختيار القطعة المناسبة 🤍
-</p>
+    <div class="review-card">
+      <div class="review-stars">
+        ★★★★★
+      </div>
+      <p>
+        جودة ممتازة والتغليف أنيق جداً، أكيد سأطلب مرة أخرى.
+      </p>
+      <div class="review-user">
+        <img src="https://randomuser.me/api/portraits/women/65.jpg">
+        <div>
+          <strong>مريم</strong>
+        </div>
+      </div>
+    </div>
 
-<a class="whatsapp-btn"
-href="https://wa.me/212600000000?text=مرحبا، أريد الطلب من متجر Sahara Layer"
-target="_blank">
+    <div class="review-card">
+      <div class="review-stars">
+        ★★★★★
+      </div>
+      <p>
+        أفضل باك حمام جربته بصراحة، البشرة تصبح ناعمة من أول استعمال.
+      </p>
+      <div class="review-user">
+        <img src="https://randomuser.me/api/portraits/women/32.jpg">
+        <div>
+          <strong>إيمان</strong>
+        </div>
+      </div>
+    </div>
 
-الطلب عبر واتساب
+  </div>
 
-</a>
+</div>
 
-</section>
+  </section>  <section class="section">
+    <div class="container"><div class="offer-box">
 
-<footer>
+    <h2>
+      عرض خاص لفترة محدودة 🔥
+    </h2>
 
-© 2026 Sahara Layer - جميع الحقوق محفوظة
+    <p>
+      احصلي الآن على باك الحمام الصحراوي مع التوصيل لجميع المدن المغربية.
+    </p>
 
-</footer>
+    <div class="price">
+      199 DH
+      <span class="old-price">299 DH</span>
+    </div>
 
-</body>
+    <a class="btn btn-whatsapp" href="https://wa.me/212600000000?text=مرحبا، أريد طلب باك الحمام الصحراوي" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+      اطلبي الآن عبر واتساب
+    </a>
+
+  </div>
+
+</div>
+
+  </section>  <a class="floating-btn" href="https://wa.me/212600000000?text=مرحبا، أريد طلب باك الحمام الصحراوي" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>  <footer>
+    © 2026 Sahara Layer — جميع الحقوق محفوظة
+  </footer></body>
 </html>
