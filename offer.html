@@ -1,0 +1,587 @@
+<!DOCTYPE html><html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bride Sahara - باك الحمام الصحراوي</title>  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Cairo',sans-serif;
+      background:#f7f1e8;
+      color:#222;
+      overflow-x:hidden;
+    }
+
+    img{
+      max-width:100%;
+      display:block;
+    }
+
+    a{
+      text-decoration:none;
+    }
+
+    .container{
+      width:92%;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    .hero{
+      min-height:100vh;
+      background:
+      linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+      url('https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1600&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      align-items:center;
+      position:relative;
+    }
+
+    .hero-content{
+      color:white;
+      max-width:650px;
+    }
+
+    .top-badge{
+      display:inline-block;
+      background:#d4af37;
+      color:#111;
+      padding:10px 18px;
+      border-radius:40px;
+      font-weight:700;
+      margin-bottom:20px;
+      font-size:14px;
+    }
+
+    .hero h1{
+      font-size:58px;
+      line-height:1.2;
+      margin-bottom:20px;
+      font-weight:800;
+    }
+
+    .hero p{
+      font-size:20px;
+      line-height:1.9;
+      margin-bottom:35px;
+      color:#f1f1f1;
+    }
+
+    .btns{
+      display:flex;
+      gap:15px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      padding:16px 30px;
+      border-radius:60px;
+      font-size:18px;
+      font-weight:700;
+      transition:.3s;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .btn-whatsapp{
+      background:#25D366;
+      color:white;
+    }
+
+    .btn-whatsapp:hover{
+      transform:translateY(-3px);
+      background:#1db85a;
+    }
+
+    .btn-outline{
+      border:2px solid white;
+      color:white;
+    }
+
+    .section{
+      padding:90px 0;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:60px;
+    }
+
+    .section-title h2{
+      font-size:42px;
+      margin-bottom:15px;
+      color:#1d1d1d;
+    }
+
+    .section-title p{
+      color:#666;
+      font-size:18px;
+    }
+
+    .features{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .feature-card{
+      background:white;
+      border-radius:28px;
+      padding:35px 25px;
+      box-shadow:0 10px 35px rgba(0,0,0,.06);
+      text-align:center;
+      transition:.3s;
+    }
+
+    .feature-card:hover{
+      transform:translateY(-6px);
+    }
+
+    .feature-card i{
+      width:80px;
+      height:80px;
+      background:#efe2cc;
+      color:#9b6b2d;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      margin:auto;
+      font-size:32px;
+      margin-bottom:22px;
+    }
+
+    .feature-card h3{
+      font-size:24px;
+      margin-bottom:12px;
+    }
+
+    .feature-card p{
+      color:#666;
+      line-height:1.8;
+    }
+
+    .products-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:25px;
+    }
+
+    .product-card{
+      overflow:hidden;
+      border-radius:28px;
+      background:white;
+      box-shadow:0 10px 35px rgba(0,0,0,.06);
+    }
+
+    .product-card img{
+      height:320px;
+      width:100%;
+      object-fit:cover;
+    }
+
+    .product-info{
+      padding:25px;
+    }
+
+    .product-info h3{
+      margin-bottom:10px;
+      font-size:24px;
+    }
+
+    .product-info p{
+      color:#666;
+      line-height:1.8;
+    }
+
+    .before-after{
+      background:#111;
+      color:white;
+      border-radius:35px;
+      padding:50px;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+      align-items:center;
+    }
+
+    .before-after img{
+      border-radius:25px;
+      height:420px;
+      object-fit:cover;
+      width:100%;
+    }
+
+    .before-after h2{
+      font-size:42px;
+      margin-bottom:20px;
+    }
+
+    .before-after p{
+      line-height:2;
+      color:#ddd;
+      margin-bottom:25px;
+    }
+
+    .reviews{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:25px;
+    }
+
+    .review-card{
+      background:white;
+      padding:30px;
+      border-radius:28px;
+      box-shadow:0 10px 35px rgba(0,0,0,.06);
+    }
+
+    .review-stars{
+      color:#d4af37;
+      margin-bottom:15px;
+      font-size:18px;
+    }
+
+    .review-card p{
+      line-height:1.9;
+      color:#555;
+      margin-bottom:20px;
+    }
+
+    .review-user{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .review-user img{
+      width:55px;
+      height:55px;
+      border-radius:50%;
+      object-fit:cover;
+    }
+
+    .offer-box{
+      background:linear-gradient(135deg,#b88b4a,#e4c68d);
+      padding:70px 30px;
+      border-radius:35px;
+      text-align:center;
+      color:white;
+    }
+
+    .offer-box h2{
+      font-size:48px;
+      margin-bottom:15px;
+    }
+
+    .price{
+      font-size:56px;
+      font-weight:800;
+      margin:25px 0;
+    }
+
+    .old-price{
+      text-decoration:line-through;
+      opacity:.7;
+      font-size:28px;
+      margin-right:10px;
+    }
+
+    .floating-btn{
+      position:fixed;
+      bottom:20px;
+      left:20px;
+      background:#25D366;
+      color:white;
+      width:70px;
+      height:70px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:32px;
+      z-index:999;
+      box-shadow:0 10px 25px rgba(0,0,0,.2);
+    }
+
+    footer{
+      background:#111;
+      color:white;
+      text-align:center;
+      padding:30px 20px;
+      margin-top:80px;
+    }
+
+    @media(max-width:768px){
+
+      .hero{
+        text-align:center;
+      }
+
+      .hero h1{
+        font-size:38px;
+      }
+
+      .hero p{
+        font-size:18px;
+      }
+
+      .btns{
+        justify-content:center;
+      }
+
+      .section-title h2,
+      .before-after h2,
+      .offer-box h2{
+        font-size:32px;
+      }
+
+      .price{
+        font-size:42px;
+      }
+
+      .before-after{
+        padding:35px 25px;
+      }
+
+    }
+
+  </style></head>
+<body>  <section class="hero">
+    <div class="container">
+      <div class="hero-content"><span class="top-badge">
+      ✨ Bride Sahara - باك الحمام الصحراوي الأصلي
+    </span>
+
+    <h1>
+      دللي بشرتك بروتين الحمام المغربي الصحراوي
+    </h1>
+
+    <p>
+      باك متكامل للعناية بالبشرة والجسم بمنتجات مستوحاة من أسرار الحمام المغربي التقليدي ولمسة صحراوية فاخرة.
+    </p>
+
+    <div class="btns">
+
+      <a class="btn btn-whatsapp" href="https://wa.me/212600000000?text=مرحبا، أريد طلب Bride Sahara - باك الحمام الصحراوي" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        اطلبي الآن عبر واتساب
+      </a>
+
+      <a class="btn btn-outline" href="#products">
+        مشاهدة التفاصيل
+      </a>
+
+    </div>
+
+  </div>
+</div>
+
+  </section>  <section class="section">
+    <div class="container"><div class="section-title">
+    <h2>لماذا هذا الباك؟</h2>
+    <p>كل ما تحتاجينه لجلسة حمام مغربي فاخرة داخل المنزل</p>
+  </div>
+
+  <div class="features">
+
+    <div class="feature-card">
+      <i class="fa-solid fa-spa"></i>
+      <h3>عناية طبيعية</h3>
+      <p>
+        تركيبة مستوحاة من وصفات الحمام المغربي التقليدي بمكونات ناعمة على البشرة.
+      </p>
+    </div>
+
+    <div class="feature-card">
+      <i class="fa-solid fa-droplet"></i>
+      <h3>ترطيب عميق</h3>
+      <p>
+        يمنح بشرتك نعومة ولمعاناً مع إحساس بالنظافة والانتعاش.
+      </p>
+    </div>
+
+    <div class="feature-card">
+      <i class="fa-solid fa-heart"></i>
+      <h3>إحساس فاخر</h3>
+      <p>
+        تجربة استرخاء وأناقة مستوحاة من أجواء الحمام المغربي الأصيل.
+      </p>
+    </div>
+
+    <div class="feature-card">
+      <i class="fa-solid fa-truck-fast"></i>
+      <h3>توصيل سريع</h3>
+      <p>
+        التوصيل متوفر لجميع المدن المغربية مع الدفع عند الاستلام.
+      </p>
+    </div>
+
+  </div>
+
+</div>
+
+  </section>  <section class="section" id="products">
+    <div class="container"><div class="section-title">
+    <h2>محتويات الباك</h2>
+    <p>منتجات مختارة بعناية لتجربة متكاملة</p>
+  </div>
+
+  <div class="products-grid">
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop">
+      <div class="product-info">
+        <h3>كريم Snow White</h3>
+        <p>
+          كريم غني يساعد على توحيد لون البشرة وترطيبها ومنحها إشراقة طبيعية.
+        </p>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1200&auto=format&fit=crop">
+      <div class="product-info">
+        <h3>الدلكة السودانية</h3>
+        <p>
+          تقشير فعال يساعد على إزالة الجلد الميت وتنعيم البشرة بعمق.
+        </p>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=1200&auto=format&fit=crop">
+      <div class="product-info">
+        <h3>صابونية النيلة</h3>
+        <p>
+          تنظيف عميق وتفتيح طبيعي للبشرة مع رائحة منعشة وإحساس فاخر.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+  </section>  <section class="section">
+    <div class="container"><div class="before-after">
+
+    <div>
+      <h2>
+        إشراقة ونعومة من أول استعمال ✨
+      </h2>
+
+      <p>
+        استمتعي بجلسة استرخاء حقيقية مع مكونات مختارة بعناية تمنح بشرتك نظافة عميقة وملمساً ناعماً يدوم.
+      </p>
+
+      <a class="btn btn-whatsapp" href="https://wa.me/212600000000?text=مرحبا، أريد طلب Bride Sahara - باك الحمام الصحراوي" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        اطلب الآن
+      </a>
+
+    </div>
+
+    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop">
+
+  </div>
+
+</div>
+
+  </section>  <section class="section">
+    <div class="container"><div class="section-title">
+    <h2>آراء بعض الزبونات</h2>
+    <p>ثقة وتجارب حقيقية من عميلاتنا</p>
+  </div>
+
+  <div class="reviews">
+
+    <div class="review-card">
+      <div class="review-stars">
+        ★★★★★
+      </div>
+      <p>
+        الباك رائع جداً والرائحة فخمة والإحساس بعد الحمام مختلف تماماً 🤍
+      </p>
+      <div class="review-user">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg">
+        <div>
+          <strong>سلمى</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">
+        ★★★★★
+      </div>
+      <p>
+        جودة ممتازة والتغليف أنيق جداً، أكيد سأطلب مرة أخرى.
+      </p>
+      <div class="review-user">
+        <img src="https://randomuser.me/api/portraits/women/65.jpg">
+        <div>
+          <strong>مريم</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">
+        ★★★★★
+      </div>
+      <p>
+        أفضل باك حمام جربته بصراحة، البشرة تصبح ناعمة من أول استعمال.
+      </p>
+      <div class="review-user">
+        <img src="https://randomuser.me/api/portraits/women/32.jpg">
+        <div>
+          <strong>إيمان</strong>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+  </section>  <section class="section">
+    <div class="container"><div class="offer-box">
+
+    <h2>
+      عرض خاص لفترة محدودة 🔥
+    </h2>
+
+    <p>
+      احصلي الآن على Bride Sahara - باك الحمام الصحراوي مع التوصيل لجميع المدن المغربية.
+    </p>
+
+    <div class="price">
+      149 DH
+      <span class="old-price">299 DH</span>
+    </div>
+
+    <a class="btn btn-whatsapp" href="https://wa.me/212600000000?text=مرحبا، أريد طلب Bride Sahara - باك الحمام الصحراوي" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+      اطلبي الآن عبر واتساب
+    </a>
+
+  </div>
+
+</div>
+
+  </section>  <a class="floating-btn" href="https://wa.me/212600000000?text=مرحبا، أريد طلب Bride Sahara - باك الحمام الصحراوي" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>  <footer>
+    © 2026 Bride Sahara — جميع الحقوق محفوظة
+  </footer></body>
+</html>
