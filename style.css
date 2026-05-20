@@ -412,23 +412,45 @@ footer h3{
   }
 
 }
-/* VIDEO SHOWCASE */
+/* VIDEO SECTION */
 
 .video-showcase{
-  padding:40px 0 0;
+  padding:40px 0 20px;
 }
 
 .video-box{
   width:100%;
-  border-radius:35px;
+  max-width:1100px;
+  margin:auto;
+  border-radius:30px;
   overflow:hidden;
+  position:relative;
   box-shadow:0 20px 60px rgba(0,0,0,.12);
+  background:#000;
 }
 
-.video-box video{
+.promo-video{
   width:100%;
+  height:auto;
+  max-height:650px;
   display:block;
-  max-height:700px;
   object-fit:cover;
-  background:black;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .video-showcase{
+    padding:20px 0;
+  }
+
+  .video-box{
+    border-radius:20px;
+  }
+
+  .promo-video{
+    max-height:420px;
+  }
+
 }
