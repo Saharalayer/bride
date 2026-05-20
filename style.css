@@ -42,9 +42,15 @@ a{
   padding:120px 0;
 }
 
-.hero-video{
+.video-container{
   position:absolute;
   inset:0;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+}
+
+.hero-video{
   width:100%;
   height:100%;
   object-fit:cover;
@@ -53,7 +59,11 @@ a{
 .hero-overlay{
   position:absolute;
   inset:0;
-  background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.65));
+  background:linear-gradient(
+    rgba(0,0,0,.55),
+    rgba(0,0,0,.68)
+  );
+  z-index:1;
 }
 
 .hero-content{
@@ -62,25 +72,30 @@ a{
   text-align:center;
   color:white;
   max-width:850px;
-  padding:50px;
-  border-radius:35px;
-  backdrop-filter:blur(10px);
+  padding:55px;
+  border-radius:40px;
+  backdrop-filter:blur(12px);
   background:rgba(255,255,255,.08);
-  border:1px solid rgba(255,255,255,.15);
+  border:1px solid rgba(255,255,255,.12);
+  box-shadow:0 25px 60px rgba(0,0,0,.25);
 }
 
 .logo{
-  width:140px;
+  width:170px;
+  height:170px;
+  object-fit:cover;
   margin:auto;
   margin-bottom:25px;
   border-radius:50%;
+  border:4px solid rgba(255,255,255,.25);
+  box-shadow:0 10px 35px rgba(255,255,255,.25);
 }
 
 .badge{
   display:inline-block;
   background:#f7c6d7;
   color:#111;
-  padding:12px 22px;
+  padding:12px 24px;
   border-radius:60px;
   font-size:14px;
   font-weight:800;
@@ -98,6 +113,7 @@ a{
   font-size:22px;
   line-height:2;
   margin-bottom:35px;
+  color:#f1f1f1;
 }
 
 .hero-btns{
@@ -112,6 +128,12 @@ a{
   border-radius:60px;
   font-size:18px;
   font-weight:800;
+  transition:.4s;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  cursor:pointer;
 }
 
 .btn-outline{
@@ -119,15 +141,22 @@ a{
   color:white;
 }
 
-/* TRUST */
+.btn-outline:hover{
+  background:white;
+  color:#111;
+  transform:translateY(-5px);
+}
+
+/* TRUST BAR */
 
 .trust-bar{
   background:white;
-  padding:25px;
+  padding:28px;
   display:flex;
   justify-content:center;
   gap:40px;
   flex-wrap:wrap;
+  box-shadow:0 10px 35px rgba(0,0,0,.05);
 }
 
 .trust-item{
@@ -135,10 +164,12 @@ a{
   align-items:center;
   gap:10px;
   font-weight:700;
+  color:#555;
 }
 
 .trust-item i{
   color:#d59ab1;
+  font-size:22px;
 }
 
 /* SECTION */
@@ -155,6 +186,12 @@ a{
 .section-title h2{
   font-size:48px;
   margin-bottom:15px;
+  color:#111;
+}
+
+.section-title p{
+  color:#777;
+  font-size:19px;
 }
 
 /* PRODUCTS */
@@ -171,10 +208,12 @@ a{
   overflow:hidden;
   box-shadow:0 15px 40px rgba(0,0,0,.06);
   transition:.4s;
+  position:relative;
 }
 
 .product-card:hover{
   transform:translateY(-10px);
+  box-shadow:0 25px 55px rgba(0,0,0,.12);
 }
 
 .product-card img{
@@ -190,6 +229,7 @@ a{
 .product-info h3{
   font-size:28px;
   margin-bottom:15px;
+  color:#111;
 }
 
 .product-info p{
@@ -199,7 +239,7 @@ a{
 }
 
 .product-price{
-  font-size:28px;
+  font-size:30px;
   font-weight:900;
   color:#d59ab1;
   margin-bottom:20px;
@@ -216,12 +256,18 @@ a{
   border:none;
   background:#111;
   color:white;
-  padding:14px 28px;
+  padding:15px 28px;
   border-radius:50px;
   font-family:'Cairo',sans-serif;
   font-size:16px;
   font-weight:800;
   cursor:pointer;
+  transition:.3s;
+}
+
+.product-btn:hover{
+  background:#d59ab1;
+  transform:translateY(-3px);
 }
 
 /* STATS */
@@ -237,21 +283,40 @@ a{
   padding:45px;
   border-radius:30px;
   text-align:center;
+  box-shadow:0 10px 35px rgba(0,0,0,.06);
+  transition:.3s;
+}
+
+.stat-box:hover{
+  transform:translateY(-8px);
 }
 
 .stat-box h3{
   font-size:55px;
   color:#d59ab1;
+  margin-bottom:10px;
+}
+
+.stat-box p{
+  font-size:18px;
+  color:#666;
 }
 
 /* OFFER */
 
 .offer{
-  background:linear-gradient(135deg,#d59ab1,#f0c9d8);
+  background:linear-gradient(
+    135deg,
+    #d59ab1,
+    #f0c9d8
+  );
   border-radius:40px;
   padding:80px 30px;
   text-align:center;
   color:white;
+  position:relative;
+  overflow:hidden;
+  box-shadow:0 20px 60px rgba(213,154,177,.3);
 }
 
 .offer h2{
@@ -259,28 +324,42 @@ a{
   margin-bottom:20px;
 }
 
-/* SOCIAL */
+.offer p{
+  font-size:20px;
+  margin-bottom:25px;
+  line-height:2;
+}
+
+/* SOCIALS */
 
 .socials{
   display:flex;
   justify-content:center;
   gap:15px;
   margin-top:35px;
+  flex-wrap:wrap;
 }
 
 .socials a{
-  width:55px;
-  height:55px;
+  width:60px;
+  height:60px;
   border-radius:50%;
   background:white;
   color:#111;
   display:flex;
   align-items:center;
   justify-content:center;
-  font-size:22px;
+  font-size:24px;
+  transition:.3s;
 }
 
-/* MODAL */
+.socials a:hover{
+  transform:translateY(-6px);
+  background:#111;
+  color:white;
+}
+
+/* ORDER MODAL */
 
 .order-modal{
   position:fixed;
@@ -300,6 +379,21 @@ a{
   border-radius:30px;
   padding:40px;
   position:relative;
+  animation:popup .4s ease;
+}
+
+@keyframes popup{
+
+  from{
+    transform:scale(.8);
+    opacity:0;
+  }
+
+  to{
+    transform:scale(1);
+    opacity:1;
+  }
+
 }
 
 .close-modal{
@@ -308,11 +402,13 @@ a{
   left:20px;
   font-size:35px;
   cursor:pointer;
+  color:#111;
 }
 
 .order-box h2{
   margin-bottom:25px;
   text-align:center;
+  font-size:32px;
 }
 
 .order-box form{
@@ -326,6 +422,12 @@ a{
   border-radius:14px;
   border:1px solid #ddd;
   font-family:'Cairo',sans-serif;
+  font-size:16px;
+  outline:none;
+}
+
+.order-box input:focus{
+  border-color:#d59ab1;
 }
 
 .order-box button{
@@ -337,6 +439,11 @@ a{
   font-size:18px;
   font-weight:800;
   cursor:pointer;
+  transition:.3s;
+}
+
+.order-box button:hover{
+  transform:translateY(-3px);
 }
 
 /* FLOATING */
@@ -354,6 +461,12 @@ a{
   gap:12px;
   z-index:999;
   font-weight:800;
+  box-shadow:0 10px 25px rgba(0,0,0,.2);
+  transition:.3s;
+}
+
+.floating-whatsapp:hover{
+  transform:translateY(-5px);
 }
 
 .floating-whatsapp i{
@@ -366,8 +479,13 @@ footer{
   background:#111;
   color:white;
   text-align:center;
-  padding:40px 20px;
+  padding:45px 20px;
   margin-top:100px;
+}
+
+footer h3{
+  font-size:32px;
+  margin-bottom:10px;
 }
 
 footer p{
@@ -387,8 +505,13 @@ footer p{
     padding:35px 25px;
   }
 
+  .logo{
+    width:120px;
+    height:120px;
+  }
+
   .hero h1{
-    font-size:40px;
+    font-size:38px;
   }
 
   .hero p{
@@ -405,6 +528,16 @@ footer p{
 
   .product-card img{
     height:auto;
+  }
+
+  .floating-whatsapp{
+    bottom:15px;
+    left:15px;
+    padding:14px 18px;
+  }
+
+  .floating-whatsapp span{
+    display:none;
   }
 
 }
