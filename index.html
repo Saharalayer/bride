@@ -2,153 +2,728 @@
 <html lang="ar" dir="rtl">
 
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Bride Sahara | متجر التجميل الفاخر</title>
+  <title>Bride Sahara | Luxury Skincare</title>
 
   <meta name="description"
-    content="Bride Sahara متجر تجميل فاخر متخصص في مستحضرات العناية بالبشرة والمكياج والعطور النسائية الراقية داخل المغرب.">
+    content="Bride Sahara - منتجات العناية بالبشرة والجسم المستوحاة من أسرار الجمال الصحراوي المغربي." />
 
-  <link rel="stylesheet" href="./style.css">
+  <meta name="keywords"
+    content="Bride Sahara, العناية بالبشرة, النيلة الصحراوية, الدلكة السودانية, الحمام المغربي, كريم تفتيح" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap"
     rel="stylesheet">
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <link rel="stylesheet"
+    href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:'Cairo',sans-serif;
+      background:#fff8fb;
+      color:#222;
+      overflow-x:hidden;
+    }
+
+    img{
+      max-width:100%;
+      display:block;
+    }
+
+    a{
+      text-decoration:none;
+    }
+
+    .container{
+      width:92%;
+      max-width:1250px;
+      margin:auto;
+    }
+
+    /* HERO */
+
+    .hero{
+      min-height:100vh;
+      position:relative;
+      overflow:hidden;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:120px 0;
+      background:#f7e7ee;
+    }
+
+    .hero video{
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      z-index:1;
+    }
+
+    .hero-overlay{
+      position:absolute;
+      inset:0;
+      background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.65));
+      z-index:2;
+    }
+
+    .hero-content{
+      position:relative;
+      z-index:3;
+      text-align:center;
+      color:white;
+      max-width:850px;
+      padding:50px;
+      border-radius:35px;
+      backdrop-filter:blur(10px);
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.15);
+      box-shadow:0 25px 60px rgba(0,0,0,.3);
+    }
+
+    .logo{
+      width:140px;
+      margin:auto;
+      margin-bottom:25px;
+      border-radius:50%;
+      border:5px solid rgba(255,255,255,.3);
+    }
+
+    .badge{
+      display:inline-block;
+      background:#f7c6d7;
+      color:#111;
+      padding:12px 22px;
+      border-radius:60px;
+      font-size:14px;
+      font-weight:800;
+      margin-bottom:25px;
+    }
+
+    .hero h1{
+      font-size:65px;
+      line-height:1.2;
+      margin-bottom:25px;
+      font-weight:900;
+    }
+
+    .hero p{
+      font-size:22px;
+      line-height:2;
+      margin-bottom:35px;
+      color:#f1f1f1;
+    }
+
+    .hero-btns{
+      display:flex;
+      gap:15px;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      padding:18px 35px;
+      border-radius:60px;
+      font-size:18px;
+      font-weight:800;
+      transition:.4s;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .btn-whatsapp{
+      background:#25D366;
+      color:white;
+      box-shadow:0 10px 25px rgba(37,211,102,.35);
+    }
+
+    .btn-whatsapp:hover{
+      transform:translateY(-5px);
+    }
+
+    .btn-outline{
+      border:2px solid white;
+      color:white;
+    }
+
+    .btn-outline:hover{
+      background:white;
+      color:#111;
+    }
+
+    /* TRUST */
+
+    .trust-bar{
+      background:white;
+      padding:25px;
+      display:flex;
+      justify-content:center;
+      gap:40px;
+      flex-wrap:wrap;
+      box-shadow:0 10px 35px rgba(0,0,0,.05);
+    }
+
+    .trust-item{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:700;
+      color:#555;
+    }
+
+    .trust-item i{
+      color:#d59ab1;
+      font-size:22px;
+    }
+
+    /* SECTION */
+
+    .section{
+      padding:100px 0;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:60px;
+    }
+
+    .section-title h2{
+      font-size:48px;
+      margin-bottom:15px;
+      color:#111;
+    }
+
+    .section-title p{
+      color:#777;
+      font-size:19px;
+    }
+
+    /* PRODUCTS */
+
+    .products-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+      gap:30px;
+    }
+
+    .product-card{
+      background:white;
+      border-radius:35px;
+      overflow:hidden;
+      box-shadow:0 15px 40px rgba(0,0,0,.06);
+      transition:.4s;
+      position:relative;
+    }
+
+    .product-card:hover{
+      transform:translateY(-10px);
+      box-shadow:0 25px 50px rgba(0,0,0,.12);
+    }
+
+    .product-card img{
+      width:100%;
+      height:420px;
+      object-fit:cover;
+    }
+
+    .product-info{
+      padding:30px;
+    }
+
+    .product-info h3{
+      font-size:28px;
+      margin-bottom:15px;
+    }
+
+    .product-info p{
+      line-height:2;
+      color:#666;
+      margin-bottom:20px;
+    }
+
+    .product-btn{
+      display:inline-block;
+      background:#111;
+      color:white;
+      padding:12px 25px;
+      border-radius:50px;
+      font-weight:700;
+      transition:.3s;
+    }
+
+    .product-btn:hover{
+      background:#d59ab1;
+    }
+
+    /* STATS */
+
+    .stats{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:25px;
+    }
+
+    .stat-box{
+      background:white;
+      padding:45px;
+      border-radius:30px;
+      text-align:center;
+      box-shadow:0 10px 35px rgba(0,0,0,.06);
+    }
+
+    .stat-box h3{
+      font-size:55px;
+      color:#d59ab1;
+      margin-bottom:10px;
+    }
+
+    .stat-box p{
+      font-size:18px;
+      color:#666;
+    }
+
+    /* REVIEWS */
+
+    .reviews{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:25px;
+    }
+
+    .review-card{
+      background:white;
+      padding:35px;
+      border-radius:30px;
+      box-shadow:0 10px 35px rgba(0,0,0,.06);
+      transition:.4s;
+    }
+
+    .review-card:hover{
+      transform:translateY(-8px);
+    }
+
+    .review-stars{
+      color:#ffbf00;
+      margin-bottom:15px;
+      font-size:18px;
+    }
+
+    .review-card p{
+      line-height:2;
+      color:#666;
+      margin-bottom:20px;
+    }
+
+    .review-user{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .review-user img{
+      width:55px;
+      height:55px;
+      border-radius:50%;
+      object-fit:cover;
+    }
+
+    /* OFFER */
+
+    .offer{
+      background:linear-gradient(135deg,#d59ab1,#f0c9d8);
+      border-radius:40px;
+      padding:80px 30px;
+      text-align:center;
+      color:white;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .offer h2{
+      font-size:55px;
+      margin-bottom:20px;
+    }
+
+    .offer p{
+      font-size:20px;
+      margin-bottom:25px;
+    }
+
+    .price{
+      font-size:65px;
+      font-weight:900;
+      margin-bottom:30px;
+    }
+
+    .old-price{
+      text-decoration:line-through;
+      opacity:.7;
+      font-size:32px;
+      margin-right:12px;
+    }
+
+    /* SOCIAL */
+
+    .socials{
+      display:flex;
+      justify-content:center;
+      gap:15px;
+      margin-top:35px;
+      flex-wrap:wrap;
+    }
+
+    .socials a{
+      width:55px;
+      height:55px;
+      border-radius:50%;
+      background:white;
+      color:#111;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:22px;
+      transition:.3s;
+    }
+
+    .socials a:hover{
+      transform:translateY(-5px);
+    }
+
+    /* FLOATING */
+
+    .floating-whatsapp{
+      position:fixed;
+      bottom:20px;
+      left:20px;
+      background:#25D366;
+      color:white;
+      padding:16px 22px;
+      border-radius:60px;
+      display:flex;
+      align-items:center;
+      gap:12px;
+      z-index:999;
+      font-weight:800;
+      box-shadow:0 10px 25px rgba(0,0,0,.2);
+    }
+
+    .floating-whatsapp i{
+      font-size:28px;
+    }
+
+    /* FOOTER */
+
+    footer{
+      background:#111;
+      color:white;
+      text-align:center;
+      padding:40px 20px;
+      margin-top:100px;
+    }
+
+    footer p{
+      opacity:.8;
+      margin-top:10px;
+    }
+
+    /* MOBILE */
+
+    @media(max-width:768px){
+
+      .hero{
+        padding:80px 0;
+      }
+
+      .hero-content{
+        padding:35px 25px;
+      }
+
+      .hero h1{
+        font-size:40px;
+      }
+
+      .hero p{
+        font-size:18px;
+      }
+
+      .section-title h2{
+        font-size:34px;
+      }
+
+      .offer h2{
+        font-size:38px;
+      }
+
+      .price{
+        font-size:48px;
+      }
+
+      .product-card img{
+        height:auto;
+      }
+
+      .floating-whatsapp{
+        bottom:15px;
+        left:15px;
+        padding:14px 18px;
+      }
+
+      .floating-whatsapp span{
+        display:none;
+      }
+
+    }
+
+  </style>
 
 </head>
 
 <body>
 
-  <!-- HEADER -->
-
-  <header>
-
-    <div class="logo">
-      Bride Sahara
-    </div>
-
-    <nav>
-      <a href="#">الرئيسية</a>
-      <a href="#products">المنتجات</a>
-      <a href="#offers">العروض</a>
-      <a href="#contact">تواصل</a>
-    </nav>
-
-  </header>
-
   <!-- HERO -->
 
   <section class="hero">
 
-    <div class="hero-content">
+    <video autoplay muted loop playsinline>
+      <source src="images/1.mp4" type="video/mp4">
+    </video>
 
-      <span class="tag">
-        ✨ متجر تجميل فاخر ✨
-      </span>
+    <div class="hero-overlay"></div>
 
-      <h1>
-        اكتشفي جمالك مع Bride Sahara
-      </h1>
+    <div class="container">
 
-      <p>
-        منتجات تجميل وعناية بالبشرة وعطور نسائية
-        بلمسة أنثوية راقية وجودة عالية.
-      </p>
+      <div class="hero-content" data-aos="zoom-in">
 
-      <a href="#products" class="hero-btn">
-        تسوقي الآن
-      </a>
+        <img src="images/logo.png" class="logo">
 
+        <span class="badge">
+          ✨ Bride Sahara Luxury Collection
+        </span>
+
+        <h1>
+          اكتشفي أسرار الجمال الصحراوي الطبيعي
+        </h1>
+
+        <p>
+          منتجات طبيعية فاخرة للعناية بالبشرة والجسم مستوحاة من أسرار الجمال المغربي الصحراوي بلمسة أنثوية راقية.
+        </p>
+
+        <div class="hero-btns">
+
+          <a href="https://wa.me/212605945494"
+            target="_blank"
+            class="btn btn-whatsapp">
+
+            <i class="fab fa-whatsapp"></i>
+            اطلبي الآن عبر واتساب
+
+          </a>
+
+          <a href="#products"
+            class="btn btn-outline">
+
+            مشاهدة المنتجات
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- TRUST -->
+
+  <section class="trust-bar">
+
+    <div class="trust-item">
+      <i class="fa-solid fa-truck-fast"></i>
+      توصيل سريع
+    </div>
+
+    <div class="trust-item">
+      <i class="fa-solid fa-shield-heart"></i>
+      منتجات أصلية
+    </div>
+
+    <div class="trust-item">
+      <i class="fa-solid fa-money-bill-wave"></i>
+      الدفع عند الاستلام
+    </div>
+
+    <div class="trust-item">
+      <i class="fa-solid fa-star"></i>
+      جودة Premium
     </div>
 
   </section>
 
   <!-- PRODUCTS -->
 
-  <section class="products" id="products">
+  <section class="section" id="products">
 
-    <div class="section-title">
+    <div class="container">
 
-      <h2>منتجاتنا المميزة</h2>
+      <div class="section-title" data-aos="fade-up">
+        <h2>منتجات Bride Sahara</h2>
+        <p>مجموعة مختارة بعناية لجمالك الطبيعي</p>
+      </div>
 
-      <p>
-        أفضل اختيارات الجمال والعناية ✨
-      </p>
+      <div class="products-grid">
 
-    </div>
+        <!-- PRODUCT 1 -->
 
-    <div class="products-grid">
+        <div class="product-card" data-aos="fade-up">
 
-      <!-- PRODUCT -->
+          <img src="images/1.jpeg">
 
-      <div class="product-card">
+          <div class="product-info">
 
-        <img
-          src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1200&auto=format&fit=crop"
-          alt="product">
+            <h3>Golden Nila</h3>
 
-        <div class="product-info">
+            <p>
+              النيلة الصحراوية الأصلية لتوحيد لون البشرة ومنحها نعومة وإشراقة طبيعية.
+            </p>
 
-          <h3>كريم العناية بالبشرة</h3>
+            <a href="https://wa.me/212605945494"
+              class="product-btn"
+              target="_blank">
 
-          <div class="price">
-            249 DH
+              اطلبي الآن
+
+            </a>
+
           </div>
-
-          <button onclick="openOrder('كريم العناية بالبشرة')">
-            اطلبي الآن
-          </button>
 
         </div>
 
-      </div>
+        <!-- PRODUCT 2 -->
 
-      <!-- PRODUCT -->
+        <div class="product-card" data-aos="fade-up">
 
-      <div class="product-card">
+          <img src="images/2.jpeg">
 
-        <img
-          src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=1200&auto=format&fit=crop"
-          alt="product">
+          <div class="product-info">
 
-        <div class="product-info">
+            <h3>Snow White</h3>
 
-          <h3>عطر نسائي فاخر</h3>
+            <p>
+              كريم ترطيب وتفتيح يمنح البشرة نعومة ولمسة حريرية يومياً.
+            </p>
 
-          <div class="price">
-            399 DH
+            <a href="https://wa.me/212605945494"
+              class="product-btn"
+              target="_blank">
+
+              اطلبي الآن
+
+            </a>
+
           </div>
-
-          <button onclick="openOrder('عطر نسائي فاخر')">
-            اطلبي الآن
-          </button>
 
         </div>
 
-      </div>
+        <!-- PRODUCT 3 -->
 
-      <!-- PRODUCT -->
+        <div class="product-card" data-aos="fade-up">
 
-      <div class="product-card">
+          <img src="images/3.jpeg">
 
-        <img
-          src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=1200&auto=format&fit=crop"
-          alt="product">
+          <div class="product-info">
 
-        <div class="product-info">
+            <h3>الدلكة السودانية</h3>
 
-          <h3>مجموعة مكياج راقية</h3>
+            <p>
+              تنظيف عميق وتقشير فعال يمنح البشرة إشراقة موحدة وملمساً ناعماً.
+            </p>
 
-          <div class="price">
-            549 DH
+            <a href="https://wa.me/212605945494"
+              class="product-btn"
+              target="_blank">
+
+              اطلبي الآن
+
+            </a>
+
           </div>
 
-          <button onclick="openOrder('مجموعة مكياج راقية')">
-            اطلبي الآن
-          </button>
+        </div>
+
+        <!-- PRODUCT 4 -->
+
+        <div class="product-card" data-aos="fade-up">
+
+          <img src="images/4.jpeg">
+
+          <div class="product-info">
+
+            <h3>Body Henna</h3>
+
+            <p>
+              خلطة طبيعية لتقشير الجسم وتخفيف التصبغات والبقع الداكنة.
+            </p>
+
+            <a href="https://wa.me/212605945494"
+              class="product-btn"
+              target="_blank">
+
+              اطلبي الآن
+
+            </a>
+
+          </div>
+
+        </div>
+
+        <!-- PRODUCT 5 -->
+
+        <div class="product-card" data-aos="fade-up">
+
+          <img src="images/5.jpeg">
+
+          <div class="product-info">
+
+            <h3>Sabounia Nila</h3>
+
+            <p>
+              صابونية النيلة لترطيب الجسم وتوحيد اللون بتركيبة مغذية فاخرة.
+            </p>
+
+            <a href="https://wa.me/212605945494"
+              class="product-btn"
+              target="_blank">
+
+              اطلبي الآن
+
+            </a>
+
+          </div>
 
         </div>
 
@@ -158,95 +733,240 @@
 
   </section>
 
-  <!-- OFFERS -->
+  <!-- STATS -->
 
-  <section class="offers" id="offers">
+  <section class="section">
 
-    <div class="offer-box">
+    <div class="container">
 
-      <h2>
-        🎀 عروض خاصة
-      </h2>
+      <div class="stats">
 
-      <p>
-        احصلي على خصم 20٪ عند طلب أكثر من منتجين
-      </p>
+        <div class="stat-box" data-aos="fade-up">
+          <h3>+5000</h3>
+          <p>عميلة سعيدة</p>
+        </div>
 
-      <a href="#products">
-        اكتشفي العروض
-      </a>
+        <div class="stat-box" data-aos="fade-up">
+          <h3>98%</h3>
+          <p>نسبة رضا الزبونات</p>
+        </div>
+
+        <div class="stat-box" data-aos="fade-up">
+          <h3>24H</h3>
+          <p>توصيل سريع</p>
+        </div>
+
+      </div>
 
     </div>
 
   </section>
+
+  <!-- REVIEWS -->
+
+  <section class="section">
+
+    <div class="container">
+
+      <div class="section-title" data-aos="fade-up">
+
+        <h2>آراء عميلاتنا</h2>
+
+        <p>
+          تجارب حقيقية من زبونات Bride Sahara
+        </p>
+
+      </div>
+
+      <div class="reviews">
+
+        <div class="review-card" data-aos="fade-up">
+
+          <div class="review-stars">
+            ★★★★★
+          </div>
+
+          <p>
+            المنتجات رائعة جداً والرائحة فخمة والبشرة تصبح ناعمة من أول استعمال 🤍
+          </p>
+
+          <div class="review-user">
+
+            <img src="https://randomuser.me/api/portraits/women/44.jpg">
+
+            <div>
+              <strong>سلمى</strong>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="review-card" data-aos="fade-up">
+
+          <div class="review-stars">
+            ★★★★★
+          </div>
+
+          <p>
+            التغليف أنيق وجودة المنتجات ممتازة، أكيد سأطلب مرة أخرى ✨
+          </p>
+
+          <div class="review-user">
+
+            <img src="https://randomuser.me/api/portraits/women/65.jpg">
+
+            <div>
+              <strong>مريم</strong>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="review-card" data-aos="fade-up">
+
+          <div class="review-stars">
+            ★★★★★
+          </div>
+
+          <p>
+            أفضل منتجات جربتها للعناية بالبشرة، فعلاً نتائج واضحة وإشراقة جميلة.
+          </p>
+
+          <div class="review-user">
+
+            <img src="https://randomuser.me/api/portraits/women/32.jpg">
+
+            <div>
+              <strong>إيمان</strong>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- OFFER -->
+
+  <section class="section">
+
+    <div class="container">
+
+      <div class="offer" data-aos="zoom-in">
+
+        <h2>
+          ✨ عروض خاصة لفترة محدودة
+        </h2>
+
+        <p>
+          احصلي الآن على منتجات Bride Sahara مع التوصيل لجميع المدن المغربية
+        </p>
+
+        <div class="price">
+
+          199 DH
+
+          <span class="old-price">
+            299 DH
+          </span>
+
+        </div>
+
+        <a href="https://wa.me/212605945494"
+          target="_blank"
+          class="btn btn-whatsapp">
+
+          <i class="fab fa-whatsapp"></i>
+          اطلبي الآن
+
+        </a>
+
+        <div class="socials">
+
+          <a href="https://www.instagram.com/bride_sahara/"
+            target="_blank">
+
+            <i class="fab fa-instagram"></i>
+
+          </a>
+
+          <a href="https://www.snapchat.com/@bride_sahara"
+            target="_blank">
+
+            <i class="fab fa-snapchat"></i>
+
+          </a>
+
+          <a href="https://www.tiktok.com/@bride__sahara"
+            target="_blank">
+
+            <i class="fab fa-tiktok"></i>
+
+          </a>
+
+          <a href="https://wa.me/212605945494"
+            target="_blank">
+
+            <i class="fab fa-whatsapp"></i>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FLOATING -->
+
+  <a href="https://wa.me/212605945494"
+    class="floating-whatsapp"
+    target="_blank">
+
+    <i class="fab fa-whatsapp"></i>
+
+    <span>
+      اطلبي الآن
+    </span>
+
+  </a>
 
   <!-- FOOTER -->
 
-  <footer id="contact">
+  <footer>
 
-    <h2>
+    <h3>
       Bride Sahara
-    </h2>
+    </h3>
 
     <p>
-      لأن جمالك يستحق الأفضل ✨
+      Luxury Skincare Expert
     </p>
 
-    <a href="https://wa.me/212605945494"
-      class="whatsapp-btn"
-      target="_blank">
-
-      تواصل عبر واتساب
-
-    </a>
+    <p>
+      © 2026 جميع الحقوق محفوظة
+    </p>
 
   </footer>
 
-  <!-- POPUP -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
-  <div class="popup" id="popup">
+  <script>
 
-    <div class="popup-box">
+    AOS.init({
+      duration:1000,
+      once:true
+    });
 
-      <span class="close"
-        onclick="closePopup()">
-
-        ×
-
-      </span>
-
-      <h2>
-        إتمام الطلب
-      </h2>
-
-      <input type="text"
-        id="fullname"
-        placeholder="الاسم الكامل">
-
-      <input type="text"
-        id="phone"
-        placeholder="رقم الهاتف">
-
-      <input type="text"
-        id="city"
-        placeholder="المدينة">
-
-      <textarea id="address"
-        placeholder="العنوان"></textarea>
-
-      <input type="text"
-        id="product"
-        readonly>
-
-      <button onclick="sendOrder()">
-        إرسال الطلب عبر واتساب
-      </button>
-
-    </div>
-
-  </div>
-
-  <script src="./script.js"></script>
+  </script>
 
 </body>
 
