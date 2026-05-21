@@ -613,3 +613,145 @@ footer h3{
   }
 
 }
+/* PRODUCTS SECTION */
+
+.pub-products{
+  padding:110px 0;
+  background:#fff8fb;
+}
+
+.pub-section-title{
+  text-align:center;
+  margin-bottom:70px;
+}
+
+.pub-section-title span{
+  display:inline-block;
+  background:#f7d6e1;
+  color:#111;
+  padding:10px 22px;
+  border-radius:50px;
+  font-weight:800;
+  margin-bottom:20px;
+}
+
+.pub-section-title h2{
+  font-size:55px;
+  margin-bottom:20px;
+  color:#111;
+}
+
+.pub-section-title p{
+  color:#666;
+  font-size:20px;
+}
+
+.pub-products-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:35px;
+}
+
+.pub-product-card{
+  background:white;
+  border-radius:35px;
+  overflow:hidden;
+  box-shadow:0 20px 50px rgba(0,0,0,.08);
+  transition:.4s;
+}
+
+.pub-product-card:hover{
+  transform:translateY(-12px);
+}
+
+.pub-product-image{
+  width:100%;
+  height:420px;
+  overflow:hidden;
+}
+
+.pub-product-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.5s;
+}
+
+.pub-product-card:hover img{
+  transform:scale(1.06);
+}
+
+.pub-product-info{
+  padding:30px;
+}
+
+.pub-product-info h3{
+  font-size:32px;
+  margin-bottom:15px;
+  color:#111;
+}
+
+.pub-product-info p{
+  color:#666;
+  line-height:2;
+  margin-bottom:25px;
+}
+
+.pub-price{
+  display:flex;
+  align-items:center;
+  gap:15px;
+  margin-bottom:25px;
+}
+
+.new-price{
+  font-size:34px;
+  font-weight:900;
+  color:#d59ab1;
+}
+
+.old-price{
+  font-size:20px;
+  color:#999;
+  text-decoration:line-through;
+}
+
+.pub-order-btn{
+  width:100%;
+  background:#111;
+  color:white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:18px;
+  border-radius:18px;
+  font-size:18px;
+  font-weight:800;
+  transition:.3s;
+}
+
+.pub-order-btn:hover{
+  background:#d59ab1;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .pub-products{
+    padding:80px 0;
+  }
+
+  .pub-section-title h2{
+    font-size:38px;
+  }
+
+  .pub-section-title p{
+    font-size:17px;
+  }
+
+  .pub-product-image{
+    height:320px;
+  }
+
+}
