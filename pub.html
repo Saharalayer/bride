@@ -30,11 +30,7 @@
 
 <body>
 
-  <!-- HERO -->
-
   <section class="pub-hero">
-
-    <!-- VIDEO -->
 
     <video id="heroVideo"
       class="pub-video"
@@ -48,11 +44,7 @@
 
     </video>
 
-    <!-- OVERLAY -->
-
     <div class="pub-overlay"></div>
-
-    <!-- CONTENT -->
 
     <div class="pub-content">
 
@@ -77,8 +69,6 @@
 
       </p>
 
-      <!-- BUTTONS -->
-
       <div class="pub-buttons">
 
         <a href="#products"
@@ -99,8 +89,6 @@
 
     </div>
 
-    <!-- SCROLL -->
-
     <div class="scroll-down">
 
       <i class="fa-solid fa-angle-down"></i>
@@ -108,8 +96,6 @@
     </div>
 
   </section>
-
-  <!-- PRODUCTS -->
 
   <section class="pub-products"
     id="products">
@@ -138,11 +124,7 @@
 
       </div>
 
-      <!-- GRID -->
-
       <div class="pub-products-grid">
-
-        <!-- PRODUCT -->
 
         <div class="pub-product-card">
 
@@ -195,8 +177,6 @@
 
         </div>
 
-        <!-- PRODUCT -->
-
         <div class="pub-product-card">
 
           <div class="pub-product-image">
@@ -247,8 +227,6 @@
           </div>
 
         </div>
-
-        <!-- PRODUCT -->
 
         <div class="pub-product-card">
 
@@ -301,13 +279,62 @@
 
         </div>
 
+        <div class="pub-product-card">
+
+          <div class="pub-product-image">
+
+            <img src="./images/sabounianila.jpg"
+              alt="Sabounia Nila">
+
+          </div>
+
+          <div class="pub-product-info">
+
+            <h3>
+
+              Sabounia Nila
+
+            </h3>
+
+            <p>
+
+              صابونية طبيعية لتبييض وتفتيح وتوحيد لون الجسم بخلاصة النيلة واللبان والزيوت الطبيعية.
+
+            </p>
+
+            <div class="pub-price">
+
+              <span class="new-price">
+
+                100 DH
+
+              </span>
+
+              <span class="old-price">
+
+                150 DH
+
+              </span>
+
+            </div>
+
+            <button
+              class="pub-order-btn order-btn"
+              data-product="Sabounia Nila">
+
+              اطلبي الآن
+
+            </button>
+
+          </div>
+
+        </div>
+
       </div>
 
     </div>
 
   </section>
-
-  <!-- SOCIALS -->
 
   <footer>
 
@@ -357,8 +384,6 @@
 
   </footer>
 
-  <!-- FLOATING -->
-
   <a href="https://wa.me/212605945494"
     class="floating-whatsapp"
     target="_blank">
@@ -366,8 +391,6 @@
     <i class="fab fa-whatsapp"></i>
 
   </a>
-
-  <!-- ORDER MODAL -->
 
   <div class="order-modal"
     id="orderModal">
@@ -424,8 +447,6 @@
 
   </div>
 
-  <!-- SCRIPTS -->
-
   <script>
 
     /* VIDEO SOUND */
@@ -473,21 +494,19 @@
     const productInput =
       document.getElementById("productName");
 
-    const orderBtns =
-      document.querySelectorAll(".order-btn");
+    // Event Delegation لالتقاط أي منتج حالي أو مستقبلي
 
-    orderBtns.forEach(btn => {
+    document.addEventListener("click", (e) => {
 
-      btn.addEventListener("click", () => {
+      if (e.target.classList.contains("order-btn")) {
 
-        const product =
-          btn.dataset.product;
+        const product = e.target.dataset.product;
 
         productInput.value = product;
 
         modal.style.display = "flex";
 
-      });
+      }
 
     });
 
